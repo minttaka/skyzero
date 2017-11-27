@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{6D371AFE-33B3-FCFA-5564-5608877283B7}") = "Skyline Zero", "Assembly-CSharp.csproj", "{3E252BEB-515B-BEB5-109F-A31013EE43F6}"
+EndProject
+Project("{6D371AFE-33B3-FCFA-5564-5608877283B7}") = "Skyline Zero", "Assembly-CSharp-Editor.csproj", "{FDF13ED6-762E-CE11-71A6-B79CD6515A2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E252BEB-515B-BEB5-109F-A31013EE43F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E252BEB-515B-BEB5-109F-A31013EE43F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E252BEB-515B-BEB5-109F-A31013EE43F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E252BEB-515B-BEB5-109F-A31013EE43F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDF13ED6-762E-CE11-71A6-B79CD6515A2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDF13ED6-762E-CE11-71A6-B79CD6515A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDF13ED6-762E-CE11-71A6-B79CD6515A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDF13ED6-762E-CE11-71A6-B79CD6515A2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
