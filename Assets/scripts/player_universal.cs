@@ -44,7 +44,7 @@ private Animator anim;
         var move = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
         transform.position += move * speed * Time.deltaTime;
 
-		if(Input.GetKeyDown("w") && isGrounded && Time.time >= nextJump) 
+		if(Input.GetKeyDown(KeyCode.UpArrow) && isGrounded && Time.time >= nextJump) 
         {
    			rb.AddForce(jumpHeight, ForceMode2D.Impulse);
    			nextJump = Time.time + 0.8f;
@@ -64,7 +64,7 @@ private Animator anim;
    			animSpeed = true;
    			movingRight = true;
    		};
-      if(Input.GetKey(KeyCode.LeftShift))
+      if(Input.GetKey(KeyCode.Space))
       {
         Attack();
       }

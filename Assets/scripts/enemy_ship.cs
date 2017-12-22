@@ -15,6 +15,7 @@ public class enemy_ship : MonoBehaviour
 	public float max = 10f;
 	public int maxHealth = 10;
 	public int curHealth;
+	private bool isDead = false;
 
     void Start () 
     {
@@ -42,7 +43,9 @@ public class enemy_ship : MonoBehaviour
 
   	void Die()
   	{
-      if (curHealth < 0) 
+		isDead = true;
+
+	if (curHealth < 0) 
       {
         curHealth = 0;
       }
@@ -58,16 +61,17 @@ public class enemy_ship : MonoBehaviour
 
 	public void Attack()
 	{	
-		bombTimer += Time.deltaTime;
-		
-		if (bombTimer >= shootInterval)
-		{
-			Vector2 direction = target.transform.position - transform.position;
-			direction.Normalize();
-			GameObject bombClone;
-			bombClone = Instantiate(bomb, shootPoint.transform.position, shootPoint.transform.rotation) as GameObject;
-			bombClone.GetComponent<Rigidbody2D>().velocity = direction * bombSpeed;
-			bombTimer = 0;
+		if (!isDead) {
+			bombTimer += Time.deltaTime;
+			
+			if (bombTimer >= shootInterval) {
+				Vector2 direction = target.transform.position - transform.position;
+				direction.Normalize ();
+				GameObject bombClone;
+				bombClone = Instantiate (bomb, shootPoint.transform.position, shootPoint.transform.rotation) as GameObject;
+				bombClone.GetComponent<Rigidbody2D> ().velocity = direction * bombSpeed;
+				bombTimer = 0;
+			}
 		}
 	}
 }

@@ -23,7 +23,7 @@ public class FightBackWithLasers : MonoBehaviour {
 	{
 		if (coll.gameObject.name == "enemy_ship")
 		{
-			enemy.GetComponent<enemy_ship>().Damage(1);
+			enemy.GetComponent<enemy_ship>().Damage(4);
 			Destroy(gameObject);
 			yield return 0;
 		}
