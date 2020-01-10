@@ -64,7 +64,7 @@ private Animator anim;
    			animSpeed = true;
    			movingRight = true;
    		};
-      if(Input.GetKey(KeyCode.Space))
+      if(Input.GetMouseButtonDown(0))
       {
         Attack();
       }
@@ -95,16 +95,16 @@ private Animator anim;
 
   public void Attack()
   { 
-    laserTimer += Time.deltaTime;
-    if (laserTimer >= shootInterval)
-    {
+    //laserTimer += Time.deltaTime;
+    //if (laserTimer >= shootInterval)
+    //{
       Vector2 direction = (Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position));
       direction.Normalize();
       GameObject laserClone;
       laserClone = Instantiate(laser, shootPoint.transform.position, shootPoint.transform.rotation) as GameObject;
       laserClone.GetComponent<Rigidbody2D>().velocity = direction * laserSpeed;
       laserTimer = 0;
-    }
+    //}
   }
 
 }
